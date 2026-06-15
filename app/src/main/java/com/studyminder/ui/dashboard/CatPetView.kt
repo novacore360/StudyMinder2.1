@@ -273,7 +273,7 @@ class CatPetView @JvmOverloads constructor(
     // ── Lottie helper ──────────────────────────────────────────────────────
     private fun playAnimation(assetName: String, loop: Boolean) {
         lottieView.cancelAnimation()
-        lottieView.setAnimationFromAsset(assetName)
+        lottieView.setAnimation(assetName)
         lottieView.repeatCount = if (loop) LottieDrawable.INFINITE else 0
         lottieView.playAnimation()
     }
