@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StudyMinder</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_subjects">Subjects</string>
+    <string name="nav_schedule">Schedule</string>
+    <string name="tab_upcoming">Upcoming</string>
+    <string name="tab_all">All</string>
+    <string name="no_schedules">No schedules yet.\nTap + to add one!</string>
+    <string name="no_subjects">No subjects yet.\nTap + to add one!</string>
+    <string name="no_upcoming">No upcoming schedules\nin the next 48 hours 🎉</string>
+    <string name="nav_rank">Rank</string>
+
+    <!-- Filter Options -->
+    <string name="filter_upcoming_48h">Upcoming (Next 48h)</string>
+    <string name="filter_all">All Schedules</string>
+    <string name="filter_missed">Missed</string>
+    <string name="filter_done">Done</string>
+    <string name="filter_upcoming">Upcoming</string>
+    <string name="no_missed">No missed schedules 🎉</string>
+    <string name="no_done">No completed schedules yet</string>
+</resources>
