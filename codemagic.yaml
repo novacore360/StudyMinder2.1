@@ -1,0 +1,31 @@
+workflows:
+  studyminder-android:
+    name: StudyMinder Android Build
+    max_build_duration: 60
+    environment:
+      groups: []
+      vars:
+        PACKAGE_NAME: "com.studyminder"
+      java: 17
+    scripts:
+      - name: Generate Gradle Wrapper (if missing)
+        script: |
+          if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
+            gradle wrapper --gradle-version 8.4
+          fi
+      - name: Build Debug APK
+        script: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace
+      - name: Build Release APK
+        script: |
+          ./gradlew assembleRelease --stacktrace
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
+    publishing:
+      email:
+        recipients: [jamesbryllefahardo@gmail.com]
+        notify:
+          success: true
+          failure: true
