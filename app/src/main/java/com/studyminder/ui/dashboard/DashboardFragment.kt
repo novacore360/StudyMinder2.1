@@ -151,7 +151,7 @@ class DashboardFragment : Fragment() {
 
         // Cat reacts to missed filter
         if (selectedFilter == getString(R.string.filter_missed) && missedCount > 0) {
-            getCat()?.showMessage(CatPetView.MISSED_MESSAGES.random())
+            getCat()?.showMessage(CatPetView.MISSED_MSGS.random())
         }
     }
 
@@ -177,9 +177,9 @@ class DashboardFragment : Fragment() {
 
         // Cat reacts
         val message = if (wasMissed) {
-            CatPetView.MISSED_MESSAGES.random()
+            CatPetView.MISSED_MSGS.random()
         } else {
-            CatPetView.DONE_MESSAGES.random()
+            CatPetView.DONE_MSGS.random()
         }
         getCat()?.showMessage(message)
     }
